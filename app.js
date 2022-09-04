@@ -1,6 +1,6 @@
 const loadQuran = async()=>{
     document.getElementById('spinner').classList.remove('d-none');
-    const res = await fetch('http://api.alquran.cloud/v1/quran');
+    const res = await fetch('https://api.alquran.cloud/v1/quran');
     const quran = await res.json();
     viewQuran(quran.data.surahs);
 }
@@ -21,7 +21,7 @@ const viewQuran =(surahs)=>{
 }
 
 const getSurah =async(surahNumber)=>{
-    const res = await fetch(`http://api.alquran.cloud/v1/surah/${surahNumber}`);
+    const res = await fetch(`https://api.alquran.cloud/v1/surah/${surahNumber}`);
     const surah = await res.json();
     showFullSurah(surah.data.ayahs);
 }
