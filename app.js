@@ -5,7 +5,7 @@ console.log("connected");
 //     const quran = await res.json();
 //     viewQuran(quran.data.surahs);
 // }
-fetch('http://api.alquran.cloud/v1/quran')
+fetch('https://api.alquran.cloud/v1/quran')
 .then((res)=>res.json())
 .then((data)=>console.log(data));
 
