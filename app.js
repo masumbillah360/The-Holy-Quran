@@ -11,10 +11,8 @@ const viewQuran =(surahs)=>{
     surahs.forEach(surah => {
         // console.log(surah);
         const surahList = document.createElement('div');
-        surahList.classList.add('col-md-3');
-        surahList.innerHTML = `
-           <button onclick = "getSurah('${surah.number}')" class = "btn btn-outline-success w-100 my-3 text-start" data-bs-toggle="modal" data-bs-target="#staticBackdrop">${surah.number} :- ${surah.englishName} ${surah.name}</button>
-        `
+        surahList.classList.add('col-6','col-md-3');
+        surahList.innerHTML = `<button onclick = "getSurah('${surah.number}')" class = "btn btn-outline-success w-100 my-3 text-start" data-bs-toggle="modal" data-bs-target="#staticBackdrop">${surah.number} :- ${surah.englishName} ${surah.name}</button>`
         surahsNameContainer.appendChild(surahList);
         document.getElementById('spinner').classList.add('d-none');
     });
@@ -38,9 +36,7 @@ const showFullSurah = (surah)=>{
         console.log(ayahs.text +" : "+ ayahs.number);
         const createAyasList = document.createElement('li');
         createAyasList.classList.add('text-end','row')
-        createAyasList.innerHTML = `
-            <span class = "col-11 fs-4">${ayahs.text}</span> <span class = "col-1 fs-4">${ayatNum++}</span>
-        `
+        createAyasList.innerHTML = `<span class ="col-1 fs-4">${++ayatNum}</span> <span class ="col-11 fs-3 arabic-font">${ayahs.text} &circledcirc;</span>`
         ayahsContainer.appendChild(createAyasList);
         
     })
