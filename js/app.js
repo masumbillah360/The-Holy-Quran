@@ -37,7 +37,7 @@ const showFullSurah = (surah)=>{
         console.log(ayahs.text +" : "+ ayahs.number);
         const createAyasList = document.createElement('li');
         createAyasList.classList.add('text-end','row')
-        createAyasList.innerHTML = `<span class ="col-1 fs-4">${++ayatNum}</span> <span class ="col-11 fs-3 arabic-font">${ayahs.text} &circledcirc;</span>`
+        createAyasList.innerHTML = `<span class ="col-1 fs-3 d-block">${++ayatNum}</span> <span class ="col-11 fs-3 arabic-font d-block">${ayahs.text} &circledcirc;</span>`
         ayahsContainer.appendChild(createAyasList);        
     })
 }
