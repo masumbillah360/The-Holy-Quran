@@ -32,9 +32,10 @@ const showFullSurah = (surah)=>{
     const ayahsContainer = document.getElementById('ayahs-container');
     ayahsContainer.textContent = "";
     surah.forEach(ayahs=>{
-        const createAyasList = document.createElement('li');
-        createAyasList.classList.add('text-end','row')
-        createAyasList.innerHTML = `<span class ="col-1 fs-3 d-block">${++ayatNum}</span> <span class ="col-11 fs-3 arabic-font d-block">${ayahs.text_uthmani} &circledcirc;</span>`
+        const createAyasList = document.createElement('div');
+        createAyasList.classList.add('text-end','d-flex', 'justify-content-start')
+        createAyasList.innerHTML = `<div style="width : 25px" class ="">${++ayatNum}.</div> 
+                                    <div class ="fs-3 arabic-font d-block">${ayahs.text_uthmani} &circledcirc;</div>`
         ayahsContainer.appendChild(createAyasList);        
     })
 }
